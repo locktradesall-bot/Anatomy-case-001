@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Pattern Discovery - Roblox Phenomenon</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+body {
+font-family: "Georgia", serif;
+line-height: 1.6;
+margin: 40px auto;
+max-width: 900px;
+padding: 0 20px;
+background-color: #fdfdfd;
+color: #111;
+position: relative;
+overflow: hidden;
+user-select: none;
+}
+h1, h2, h3 { font-family: "Arial", sans-serif; color: #2a2a2a; }
+.code-block {
+background: #121212;
+color: #00ff00;
+border-left: 4px solid #0f0;
+padding: 10px 15px;
+font-family: 'VT323', monospace;
+overflow-x: auto;
+margin: 10px 0 20px 0;
+cursor: default;
+height: 150px;
+overflow-y: scroll;
+white-space: pre-wrap;
+}
+.code-block:hover {
+background: #111;
+}
+.flash {
+color: #d00;
+font-weight: bold;
+animation: flashText 1s infinite;
+text-shadow: 0 0 5px #f00;
+}
+@keyframes flashText {
+0%,50%,100% {opacity:1;}
+25%,75% {opacity:0.2;}
+}
+.tooltip {
+border-bottom:1px dotted #555;
+cursor:help;
+position:relative;
+}
+.tooltip:hover::after {
+content: attr(data-text);
+position:absolute;
+left:0;
+top:20px;
+background:#333;
+color:#fff;
+padding:5px 8px;
+font-size:0.85em;
+white-space:nowrap;
+z-index:100;
+}
+#glitchOverlay {
+position: fixed;
+top: 0; left: 0; width: 100%; height: 100%;
+pointer-events: none;
+background: url('https://i.imgur.com/1jLk1Bq.png');
+opacity: 0.05;
+animation: glitchOverlay 0.5s infinite alternate;
+mix-blend-mode: screen;
+}
+@keyframes glitchOverlay { 0% {opacity:0.03;} 50% {opacity:0.08;} 100% {opacity:0.03;} }
+
+/* Text glitch effect */
+.glitch {
+position: relative;
+color: #222;
+}
+.glitch::before,
+.glitch::after {
+content: attr(data-text);
+position: absolute;
+left: 0; top: 0;
+width: 100%;
+overflow: hidden;
+color: #ff0000;
+clip-path: polygon(0 2%, 100% 2%, 100% 4%, 0 4%);
+animation: glitchText 2s infinite linear alternate-reverse;
+}
+.glitch::after {
+color: #00ffea;
+clip-path: polygon(0 85%, 100% 85%, 100% 87%, 0 87%);
+animation-delay: 1s;
+}
+@keyframes glitchText {
+0% {
+clip-path: polygon(0 2%, 100% 2%, 100% 4%, 0 4%);
+transform: translate(0);
+}
+50% {
+clip-path: polygon(0 10%, 100% 10%, 100% 12%, 0 12%);
+transform: translate(-2px, 2px);
+}
+100% {
+clip-path: polygon(0 2%, 100% 2%, 100% 4%, 0 4%);
+transform: translate(0);
+}
+}
+
+/* Distort random text */
+.distort {
+display: inline-block;
+animation: distortAnim 0.3s infinite alternate;
+color: #f00;
+text-shadow: 0 0 3px #f00;
+}
+@keyframes distortAnim {
+0% {transform: translate(0);}
+50% {transform: translate(2px, -2px) skew(5deg);}
+100% {transform: translate(0);}
+}
+</style>
+</head>
+<body>
+
+<div id="glitchOverlay"></div>
+
+<h1 class="glitch" data-text="Pattern Discovery (Roblox Phenomenon)">Pattern Discovery (Roblox Phenomenon)</h1>
+
+<p>The <strong>Pattern Discovery</strong> refers to a mysterious event observed in multiple <span class="tooltip" data-text="A massively popular online platform for user-created games">Roblox</span> games by two brothers, <em>Brother_Aureus</em> and <em>Brother_Virid</em>. The phenomenon involves a recurring spatial pattern in game objects, spawn points, and NPC paths that appear to reference real-world coordinates: <span class="flash">41.30165865894627, -72.12947321372269</span>.</p>
+
+<h2>Discovery and Initial Observation</h2>
+<p>While exploring Roblox in private servers and studio mode, the brothers noticed subtle alignments across multiple maps. The pattern, when traced, pointed to a vector that seemed consistent across unrelated games.</p>
+
+<h2>Entities Involved</h2>
+<p>The phenomenon is associated with mysterious entities that render like players but have no UserId. Most notable is the <em>white gloved hand</em>, appearing as a player named <strong>WhiteGlove_01</strong>. Another mysterious presence, referred to as <span class="tooltip" data-text="A cryptic player who appears to monitor the coordinates">LOOK</span>, seems to guard the coordinates, preventing access or understanding.</p>
+
+<h2>Psychological Impact on Observers</h2>
+<p>The brothers reported several in-game effects consistent with Roblox glitch behaviors, including:</p>
+<ul>
+<li><span class="distort">Camera jitter</span> and UI distortions</li>
+<li>Auditory hallucinations and looping sounds</li>
+<li>Garbled chat messages</li>
+<li>Obsessive tracking of the pattern across games</li>
+</ul>
+
+<h2>Join/Leave Logs</h2>
+<div class="code-block" id="logConsole" tabindex="0">
+[03/11/2025 22:17:09] Brother_Aureus joined game.
+[03/11/2025 22:17:12] Brother_Virid joined game.
+[03/11/2025 22:22:05] ???(ENTITY) spawned
+[03/11/2025 22:35:01] WhiteGlove_01 joined server
+[03/11/2025 22:35:12] Player: LOOK detected by script - No UserId linked
+[03/11/2025 22:40:15] Brother_Virid left
+[03/11/2025 22:40:20] Brother_Aureus left
+[03/11/2025 22:41:05] Server reset
+</div>
+
+<h2>Conclusion</h2>
+<p>The <strong>Pattern Discovery</strong> phenomenon remains unexplained. Players who follow the pattern report experiencing what seems like persistent observation by <em>WhiteGlove_01</em> and occasional interference by <span class="tooltip" data-text="A cryptic player entity, appearing as 'LOOK'">LOOK</span>. The effect is largely confined to Roblox's online environment, with hints that the pattern is self-propagating across servers.</p>
+
+<h2>References</h2>
+<ul>
+<li>Private server logs, 03/11/2025</li>
+<li>Roblox Studio experiments by Brother_Aureus and Brother_Virid</li>
+<li>Archived join/leave events from ObscurePattern_01 map</li>
+</ul>
+
+<script>
+// Simulate text distortions on random words inside the page
+function distortRandomText() {
+const words = document.body.innerText.split(/\s+/);
+const randomWord = words[Math.floor(Math.random() * words.length)];
+const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+let node;
+while (node = walker.nextNode()) {
+if(node.nodeValue.includes(randomWord)) {
+const parent = node.parentNode;
+const replacedHTML = node.nodeValue.replace(new RegExp(`\\b${randomWord}\\b`), `<span class="distort">${randomWord}</span>`);
+const tempDiv = document.createElement('div');
+tempDiv.innerHTML = replacedHTML;
+parent.replaceChild(tempDiv.firstChild, node);
+break;
+}
+}
+}
+setInterval(distortRandomText, 2500);
+
+// Live scrolling console log simulation
+const logConsole = document.getElementById('logConsole');
+const logLines = [
+"[03/11/2025 22:17:09] Brother_Aureus joined game.",
+"[03/11/2025 22:17:12] Brother_Virid joined game.",
+"[03/11/2025 22:22:05] ???(ENTITY) spawned",
+"[03/11/2025 22:35:01] WhiteGlove_01 joined server",
+"[03/11/2025 22:35:12] Player: LOOK detected by script - No UserId linked",
+"[03/11/2025 22:40:15] Brother_Virid left",
+"[03/11/2025 22:40:20] Brother_Aureus left",
+"[03/11/2025 22:41:05] Server reset"
+];
+let lineIndex = 0;
+
+function scrollLog() {
+logConsole.textContent = logConsole.textContent.split('\n').slice(1).join('\n') + '\n' + logLines[lineIndex];
+lineIndex = (lineIndex + 1) % logLines.length;
+logConsole.scrollTop = logConsole.scrollHeight;
+}
+setInterval(scrollLog, 4000);
+</script>
+
+</body>
+</html>
